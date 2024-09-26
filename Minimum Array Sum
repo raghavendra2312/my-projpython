@@ -1,0 +1,13 @@
+def min_sum_after_operations(N,A):
+    max_element=max(A)
+    average = max_element
+    for i in range(N):
+        if A[i] < average:
+            A[i] = 0
+    return sum(A)
+if __name== "__main__":
+    import sys
+    N=int(sys.stdin.readline().strip())
+    A=list(map(int,sys.stdin.readline().strip().split()))
+    result = min_sum_after_operations(N,A)
+    print(result)
