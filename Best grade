@@ -1,0 +1,6 @@
+a=input()
+pos=int(input())
+adj=int(input())
+start=max(0,pos-adj-1)
+end=min(len(a),pos+adj)
+print(min(a[start:end]))
